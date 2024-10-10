@@ -71,4 +71,12 @@ app.all("*", (req, res, next) => {
 // GLOBAL ERROR HANDLING MIDDLEWARE
 app.use(globalErrorHandler);
 
+// Define the port (either from environment variables or fallback to 5000)
+const PORT = process.env.PORT || 3000;
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 export default app;
