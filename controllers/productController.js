@@ -256,7 +256,7 @@ export const deleteReview = async (req, res) => {
 
 export const getAllProducts = async (req, res) => {
     try {
-        const { priceRange, sort, order = 'asc', page = 1, limit = 10 } = req.query;
+        const { priceRange, sort, order = 'asc', page = 1, limit = 100  } = req.query;
 
         // Build the filter query from request parameters
         let query = buildFilterQuery(req.query);
